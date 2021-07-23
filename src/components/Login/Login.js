@@ -21,7 +21,7 @@ class Login extends React.Component{
     onLoginSubmit = (event) => {
         if(this.state.loginEmail && this.state.loginPassword){
             event.preventDefault();
-            fetch('http://localhost:3000/login', {
+            fetch('https://stark-sea-36984.herokuapp.com/login', {
                 method: 'post',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({

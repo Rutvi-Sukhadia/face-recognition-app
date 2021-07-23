@@ -38,7 +38,7 @@ class Registration extends React.Component{
             this.setState({message:"Set Password and confirm password does not match"});
             return;
         }
-        fetch('http://localhost:3000/register', {
+        fetch('https://stark-sea-36984.herokuapp.com/register', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

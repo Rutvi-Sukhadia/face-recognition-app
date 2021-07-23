@@ -138,7 +138,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageURL: this.state.input});
-    fetch('http://localhost:3000/imageURL', {
+    fetch('https://stark-sea-36984.herokuapp.com/imageURL', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -154,7 +154,7 @@ class App extends Component {
       else if(response.outputs && response.outputs[0].data.regions){
         this.setState({errorMsg: null});
         const regions = response.outputs[0].data.regions;
-        fetch('http://localhost:3000/imageEntry', {
+        fetch('https://stark-sea-36984.herokuapp.com/imageEntry', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
